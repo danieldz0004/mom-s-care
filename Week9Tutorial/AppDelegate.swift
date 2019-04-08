@@ -4,18 +4,29 @@
 //
 //  Created by Jason Haasz on 28/4/18.
 //  Copyright © 2018 Jason Haasz. All rights reserved.
-//
+//  Tutorial altered from https://www.raywenderlich.com/140836/firebase-tutorial-real-time-chat-2
 
 import UIKit
+import CoreData
+import GoogleMaps
+import GooglePlaces
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyBQJdd3kF5mxAYLk_e2kzMXY6stXJie_TA")
+        GMSServices.provideAPIKey("AIzaSyBQJdd3kF5mxAYLk_e2kzMXY6stXJie_TA")
+    
+        
         return true
     }
 
