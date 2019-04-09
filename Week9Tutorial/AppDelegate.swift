@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        if (!(UserDefaults.standard.bool(forKey: "everLaunched"))) {
+            UserDefaults.standard.set(true, forKey:"everLaunched")
+            let  guideViewController = GuideViewController()
+            self.window!.rootViewController=guideViewController;
+            print("guideview launched!")
+        }
+        
         FirebaseApp.configure()
         
         GMSPlacesClient.provideAPIKey("AIzaSyBQJdd3kF5mxAYLk_e2kzMXY6stXJie_TA")

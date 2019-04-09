@@ -214,15 +214,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IN YOUR AREA ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-D4-e48">
-                                <rect key="frame" x="113" y="183" width="189" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="PB4-qY-RFL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQu-9X-YgM">
                                 <rect key="frame" x="32" y="223" width="350" height="30"/>
                                 <nil key="textColor"/>
@@ -245,6 +236,15 @@
                                     <action selector="covInfoBtn:" destination="MeI-Ue-wCf" eventType="touchUpInside" id="h4N-HW-7ZS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN YOUR AREA ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-D4-e48">
+                                <rect key="frame" x="26" y="183" width="362" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="PB4-qY-RFL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -253,7 +253,7 @@
                             <constraint firstItem="fBf-ux-bC5" firstAttribute="leading" secondItem="x0Q-WI-X2f" secondAttribute="leading" id="55M-bP-WMt"/>
                             <constraint firstItem="Dwa-IR-WFW" firstAttribute="top" secondItem="viM-Eg-nXL" secondAttribute="top" constant="63" id="6Og-T8-GNr"/>
                             <constraint firstItem="7GW-i9-Knq" firstAttribute="centerX" secondItem="fBf-ux-bC5" secondAttribute="centerX" id="Ahg-yh-XW1"/>
-                            <constraint firstItem="Ede-D4-e48" firstAttribute="leading" secondItem="viM-Eg-nXL" secondAttribute="leading" constant="113" id="TuR-eu-yyc"/>
+                            <constraint firstItem="Ede-D4-e48" firstAttribute="leading" secondItem="viM-Eg-nXL" secondAttribute="leading" constant="26" id="TuR-eu-yyc"/>
                             <constraint firstItem="7GW-i9-Knq" firstAttribute="top" secondItem="hQu-9X-YgM" secondAttribute="bottom" constant="8" symbolic="YES" id="ZHM-HP-fn5"/>
                             <constraint firstAttribute="trailing" secondItem="fBf-ux-bC5" secondAttribute="trailing" id="aWo-V0-dsl"/>
                             <constraint firstItem="Dwa-IR-WFW" firstAttribute="trailing" secondItem="hQu-9X-YgM" secondAttribute="trailing" id="d5u-0p-j2N"/>
