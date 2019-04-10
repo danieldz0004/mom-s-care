@@ -1,20 +1,18 @@
 //
-//  FirstViewController.swift
-//  mom's care
+//  SixthViewController.swift
+//  Week9Tutorial
 //
-//  Created by Daniel Dz on 4/4/19.
-//  Copyright © 2019 Daniel Dz. All rights reserved.
+//  Created by Daniel Dz on 10/4/19.
+//  Copyright © 2019 Jason Haasz. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class SixthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         // Do any additional setup after loading the view.
     }
     

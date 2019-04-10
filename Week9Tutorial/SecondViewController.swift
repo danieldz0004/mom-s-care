@@ -15,13 +15,18 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var agePicker: UIPickerView!
     @IBOutlet weak var regionPicker: UIPickerView!
     
+    @IBOutlet weak var infoButton: UIButton!
     var agePickerData: [String] = [String]()
     var regionPickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        regionPickerData = ["China", "Australia", "Test1", "Test2"]
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "homeScreen.png")!)
+        
+        infoButton.layer.cornerRadius = 4
+        
+        regionPickerData = ["China", "India"]
         
         agePickerData = ["0-2","2-4","4-6", "6-8", "8-12"]
         

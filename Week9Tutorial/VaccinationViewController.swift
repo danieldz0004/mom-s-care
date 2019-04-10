@@ -27,18 +27,18 @@ class VaccinationViewController: UIViewController {
             vaccImgInfo.image = #imageLiteral(resourceName: "6-8cn")
         } else if selection == "China8-12" {
             vaccImgInfo.image = #imageLiteral(resourceName: "8-12cn")
-        } else if selection == "Australia0-2" {
-        
-        } else if selection == "Australia2-4" {
-        
-        } else if selection == "Australia4-6" {
-            
-        } else if selection == "Australia6-8" {
-            
-        } else if selection == "Australia8-12" {
-        
+        } else if selection == "India0-2" {
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
+        } else if selection == "India2-4" {
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
+        } else if selection == "India4-6" {
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
+        } else if selection == "India6-8" {
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
+        } else if selection == "India8-12" {
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
         } else {
-            
+            vaccImgInfo.image = #imageLiteral(resourceName: "Building")
         }
         // Do any additional setup after loading the view.
     }
