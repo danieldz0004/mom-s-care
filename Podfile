@@ -10,6 +10,7 @@ target 'Week9Tutorial' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
+  pod 'Charts'
 
   # Pods for Week9Tutorial
 
