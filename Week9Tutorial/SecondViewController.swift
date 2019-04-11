@@ -68,6 +68,18 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        if pickerView == agePicker{
+            let attributedString = NSAttributedString(string: agePickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+            return attributedString
+        }
+        else{
+            let attributedString = NSAttributedString(string: regionPickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+            return attributedString
+        }
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showVacInfo") {
