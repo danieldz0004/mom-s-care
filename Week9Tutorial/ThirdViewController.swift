@@ -14,44 +14,50 @@ import Charts
 class ThirdViewController: UIViewController {
 
     @IBOutlet weak var InfoButton: UIButton!
+
+
+    @IBOutlet weak var barChartView: BarChartView!
     @IBAction func covInfoBtn(_ sender: Any) {
         let a:Int? = Int(postCodeField.text ?? "0")
         
         if a != nil{
             if a! >= 3000 && a! <= 4000{
-                self.percentageLabel.text = dataFromFirebaseArray[postCodeField.text! as String]! + "%"
+                years = ["2011-12", "2012-13", "2013-14", "2014-15", "2015-16", "2016-17"]
+                barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:years)
+                barChartView.xAxis.granularity = 1
+                setChart(dataPoints: years, values: dataFromFirebaseArray[postCodeField.text!]! as [Double])
             }
             else{
-                self.percentageLabel.text = "Postcode Error"
+                
             }
         }
         else{
-            self.percentageLabel.text = "Postcode Error"
+            
         }
     }
-    @IBOutlet weak var percentageLabel: UILabel!
+
     @IBOutlet weak var postCodeField: UITextField!
     var ref: DatabaseReference?
-    var dataFromFirebaseArray = [String:String]()
+    var dataFromFirebaseArray = [String:[Double]]()
+    var years: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        assignbackground()
-        
+        barChartView.noDataText = "Please input your postcode above"
         
         InfoButton.layer.cornerRadius = 4
         
-        self.percentageLabel.text = ""
+//        self.percentageLabel.text = ""
         
         Auth.auth().signIn(withEmail: "localhost@theshield.com", password: "4theshield.com")
         
         ref = Database.database().reference()
         
         
-        ref?.child("coverage").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("Coverage").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
-            let value = snapshot.value as? [String:String]
+            let value = snapshot.value as? [String:[Double]]
             
             self.dataFromFirebaseArray.removeAll()
             
@@ -70,21 +76,21 @@ class ThirdViewController: UIViewController {
         postCodeField.placeholder = "Please Enter Your Postcode"
         postCodeField.clearButtonMode = .whileEditing
         
-        
         // Do any additional setup after loading the view.
     }
     
-    func assignbackground(){
-        let background = UIImage(named: "homeScreen.jpg")
+    
+    func setChart(dataPoints: [String], values: [Double]) {
+        var dataEntries: [BarChartDataEntry] = []
         
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubview(toBack: imageView)
+        for i in 0..<dataPoints.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Percent full immunised (%)")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        barChartView.data = chartData
     }
     
 

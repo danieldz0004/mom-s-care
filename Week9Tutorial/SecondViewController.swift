@@ -22,8 +22,6 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "homeScreen.png")!)
-        
         infoButton.layer.cornerRadius = 4
         
         regionPickerData = ["China", "India"]
@@ -68,17 +66,17 @@ class SecondViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        if pickerView == agePicker{
-            let attributedString = NSAttributedString(string: agePickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
-            return attributedString
-        }
-        else{
-            let attributedString = NSAttributedString(string: regionPickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
-            return attributedString
-        }
-        
-    }
+//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        if pickerView == agePicker{
+//            let attributedString = NSAttributedString(string: agePickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+//            return attributedString
+//        }
+//        else{
+//            let attributedString = NSAttributedString(string: regionPickerData[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+//            return attributedString
+//        }
+//
+//    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -5,9 +5,9 @@
       location = "group:/Users/danieldz/Desktop/Week9Tutorial/Week9Tutorial.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Week9Tutorial.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Week9Tutorial.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
