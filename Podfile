@@ -11,6 +11,7 @@ target 'Week9Tutorial' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'Charts'
+  pod 'PopupWindow'
 
   # Pods for Week9Tutorial
 
