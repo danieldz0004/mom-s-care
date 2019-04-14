@@ -55,6 +55,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PopupWindow (0.1.0)
 
 DEPENDENCIES:
   - Charts
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - PopupWindow
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -80,6 +82,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PopupWindow
 
 SPEC CHECKSUMS:
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
@@ -96,7 +99,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PopupWindow: 2f3a33001295435a3ab568e42a970d51539ed6e9
 
-PODFILE CHECKSUM: ac9cdc6e93e2e06f886245a8c69d43fd4992df5a
+PODFILE CHECKSUM: c3f478bd63e1fced31811db4026160edabd567db
 
 COCOAPODS: 1.5.3
